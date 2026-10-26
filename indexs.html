@@ -1,0 +1,325 @@
+<!DOCTYPE html>  <html lang="id">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Happy Birthday Sayang 💙</title>  <style>  
+* {  
+  box-sizing: border-box;  
+}  
+  
+body {  
+  margin: 0;  
+  padding: 25px 15px;  
+  min-height: 100vh;  
+  text-align: center;  
+  font-family: Arial, sans-serif;  
+  color: white;  
+  background: linear-gradient(135deg, #06152e, #145da0, #91c9ff);  
+}  
+  
+.container {  
+  max-width: 520px;  
+  margin: auto;  
+}  
+  
+h1 {  
+  font-size: 38px;  
+  color: #d9edff;  
+}  
+  
+h2 {  
+  color: #e0f1ff;  
+}  
+  
+p {  
+  line-height: 1.8;  
+}  
+  
+.cake {  
+  font-size: 85px;  
+  animation: goyang 2s infinite;  
+}  
+  
+@keyframes goyang {  
+  50% { transform: translateY(-10px); }  
+}  
+  
+.card {  
+  padding: 22px;  
+  margin: 22px 0;  
+  border-radius: 22px;  
+  background: #ffffff20;  
+  border: 1px solid #ffffff60;  
+  box-shadow: 0 8px 25px #00152c40;  
+}  
+  
+button {  
+  padding: 13px 20px;  
+  margin: 7px;  
+  border: none;  
+  border-radius: 25px;  
+  background: #d8edff;  
+  color: #123b65;  
+  font-size: 14px;  
+  font-weight: bold;  
+  cursor: pointer;  
+}  
+  
+button:hover {  
+  background: white;  
+}  
+  
+#ucapan {  
+  min-height: 125px;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  line-height: 1.8;  
+}  
+  
+.foto {  
+  width: 100%;  
+  max-width: 250px;  
+  height: 260px;  
+  object-fit: cover;  
+  border-radius: 18px;  
+  border: 3px solid #d8edff;  
+  margin: 8px 0;  
+  box-shadow: 0 5px 15px #00152c50;  
+}  
+  
+.foto-kecil {  
+  width: 100%;  
+  height: 150px;  
+  object-fit: cover;  
+  border-radius: 14px;  
+}  
+  
+.gallery {  
+  display: grid;  
+  grid-template-columns: repeat(2, 1fr);  
+  gap: 12px;  
+}  
+  
+.gallery img {  
+  width: 100%;  
+  height: 160px;  
+  object-fit: cover;  
+  border-radius: 15px;  
+  border: 2px solid #d8edff;  
+}  
+  
+.caption {  
+  font-size: 12px;  
+  color: #e0f1ff;  
+}  
+  
+.heart {  
+  position: fixed;  
+  bottom: -30px;  
+  pointer-events: none;  
+  animation: naik 5s linear forwards;  
+}  
+  
+@keyframes naik {  
+  to {  
+    transform: translateY(-110vh);  
+    opacity: 0;  
+  }  
+}  
+  
+input[type="file"] {  
+  display: block;  
+  width: 100%;  
+  margin: 12px auto;  
+  font-size: 12px;  
+}  
+  
+.footer {  
+  font-size: 12px;  
+  color: #d9edff;  
+  padding-bottom: 20px;  
+}  
+</style>  </head>  <body>  
+<div class="container">    <p>✦ A SPECIAL DAY FOR YOU ✦</p>    <h1>Happy Birthday<br>My Favorite Boy 💙</h1>    <p>  
+    Today is your special day, sayang!<br>  
+    Aku punya sesuatu untuk kamu 🥹💙  
+  </p>    <div class="cake">🎂</div>    <!-- UCAPAN ULANG TAHUN -->    <section class="card">  
+    <h2>💌 Birthday Letter</h2>  <p id="ucapan">  
+  Untuk cowok kesayanganku...<br>  
+  tekan tombol di bawah untuk membuka suratmu 💙  
+</p>  
+
+<p id="nomor">Bagian 0 dari 5</p>  
+
+<button onclick="lanjutUcapan()">  
+  Buka Ucapan 💌  
+</button>  
+
+<button onclick="ulangUcapan()">  
+  Ulangi ↻  
+</button>
+
+  </section>    <!-- FOTO UTAMA -->    <section class="card">  
+    <h2>📸 My Favorite Person</h2>  <!-- GANTI foto-pacar.jpg DENGAN NAMA FILE FOTOMU -->  
+<img  
+  src="foto-pacar.jpg"  
+  alt="Foto pacarku"  
+  class="foto"  
+  onerror="this.style.display='none'; document.getElementById('fotoError').style.display='block';"  
+>  
+
+<p id="fotoError" style="display:none">  
+  Foto belum ditemukan. Masukkan foto dengan nama  
+  <b>foto-pacar.jpg</b> ke folder yang sama dengan index.html.  
+</p>  
+
+<p class="caption">  
+  My favorite boy, today and always 💙  
+</p>
+
+  </section>    <!-- GALERI FOTO -->    <section class="card">  
+    <h2>🩵 Our Little Memories</h2>  <p>Beberapa kenangan favorit kita.</p>  
+
+<div class="gallery">  
+
+  <!-- GANTI NAMA FILE FOTO DI BAWAH -->  
+  <div>  
+    <img src="foto1.jpg"  
+         alt="Kenangan pertama"  
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">  
+
+    <p class="caption" style="display:none">  
+        
+    </p>  
+
+    <p class="caption">Our memory ♡</p>  
+  </div>  
+
+  <div>  
+    <img src="foto2.jpg"  
+         alt="Kenangan kedua"  
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">  
+
+    <p class="caption" style="display:none">  
+        
+    </p>  
+
+    <p class="caption">My happiness ♡</p>  
+  </div>  
+
+  <div>  
+    <img src="foto3.jpg"  
+         alt="Kenangan ketiga"  
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">  
+
+    <p class="caption" style="display:none">  
+        
+    </p>  
+
+    <p class="caption">Us together ♡</p>  
+  </div>  
+
+  <div>  
+    <img src="foto4.jpg"  
+         alt="Kenangan keempat"  
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">  
+
+    <p class="caption" style="display:none">  
+        
+    </p>  
+
+    <p class="caption">Forever memories ♡</p>  
+  </div>  
+
+</div>
+
+  </section>    <!-- KEJUTAN TERAKHIR -->    <section class="card">  
+    <h2>🎁 A Special Wish</h2>  <p id="doa">  
+  Ada satu doa spesial yang ingin aku berikan  
+  untuk kamu di hari ulang tahunmu.  
+</p>  
+
+<button onclick="bukaDoa()">  
+  Buka Kejutan ✨  
+</button>
+
+  </section>    <p class="footer">  
+    Made with love, just for you ♡<br>  
+    Happy Birthday, Sayang 💙  
+  </p>  </div>  <script>  
+const ucapan = [  
+  "Happy birthday, sayangku! 🎂💙 Hari ini adalah hari spesial karena seseorang yang sangat spesial telah lahir ke dunia.",  
+  
+  "Semoga kamu selalu sehat, panjang umur, bahagia, dan dimudahkan dalam semua urusanmu. Semoga semua cita-citamu tercapai. Aamiin 🤍",  
+  
+  "Terima kasih sudah hadir di hidupku. Aku senang bisa mengenalmu, berbagi cerita denganmu, dan membuat kenangan indah bersama kamu. 🫶",  
+  
+  "Kalau nanti kamu lelah, jangan menyerah, ya. Kamu sudah berusaha sejauh ini dan aku berharap banyak hal baik datang ke hidupmu. 💙",  
+  
+  "I love you, my favorite boy! Semoga umur barumu dipenuhi kebahagiaan, rezeki, kesehatan, dan mimpi yang menjadi nyata. Happy birthday, sayangku! 🎉💙"  
+];  
+  
+let index = 0;  
+  
+function lanjutUcapan() {  
+  if (index < ucapan.length) {  
+    document.getElementById("ucapan").textContent =  
+      ucapan[index];  
+  
+    index++;  
+  
+    document.getElementById("nomor").textContent =  
+      "Bagian " + index + " dari " + ucapan.length;  
+  
+    if (index === ucapan.length) {  
+      document.querySelector("#nomor").textContent =  
+        "Semua ucapan sudah terbuka 💙";  
+      buatHati();  
+    }  
+  } else {  
+    ulangUcapan();  
+  }  
+}  
+  
+function ulangUcapan() {  
+  index = 0;  
+  
+  document.getElementById("ucapan").textContent =  
+    "Untuk cowok kesayanganku... tekan tombol di bawah untuk membuka suratmu 💙";  
+  
+  document.getElementById("nomor").textContent =  
+    "Bagian 0 dari " + ucapan.length;  
+}  
+  
+function bukaDoa() {  
+  document.getElementById("doa").textContent =  
+    "Semoga Tuhan selalu menjagamu, memberimu kesehatan, hati yang tenang, rezeki yang baik, dan jalan untuk meraih semua impianmu. Semoga kamu selalu punya alasan untuk tersenyum. Aku berharap kita bisa membuat lebih banyak kenangan indah bersama. Aamiin. 💙🤍";  
+  
+  buatHati();  
+}  
+  
+function buatHati() {  
+  for (let i = 0; i < 18; i++) {  
+    const hati = document.createElement("span");  
+  
+    hati.className = "heart";  
+    hati.textContent = ["💙", "🩵", "♡", "✨"][  
+      Math.floor(Math.random() * 4)  
+    ];  
+  
+    hati.style.left = Math.random() * 100 + "vw";  
+    hati.style.fontSize =  
+      (18 + Math.random() * 20) + "px";  
+  
+    hati.style.animationDuration =  
+      (3 + Math.random() * 3) + "s";  
+  
+    document.body.appendChild(hati);  
+  
+    setTimeout(() => hati.remove(), 6500);  
+  }  
+}  
+</script>  </body>  
+</html>  
+tolong jadikan download
